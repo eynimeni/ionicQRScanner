@@ -20,9 +20,9 @@ export class Tab1Page {
     this.chats = await this.storageService.get();
   }
 
-  public navigateTo(chat:Chat): void {
-    this.router.navigate(['/tabs/tab2'], {state:
-        {data: chat}})
+  public navigateTo(chatId: string): void {
+    this.router.navigate(['/tabs/tab2'], {queryParams: { id : chatId}
+    })
   }
 
 }

@@ -16,7 +16,7 @@
   <ion-list>
     <ion-item *ngFor="let chat of chats">
       <ion-label>{{chat.id}}</ion-label>
-      <ion-button (click)="navigateTo(chat)">Show Chat</ion-button>
+      <ion-button (click)="navigateTo(chat.id)">Show Chat</ion-button>
     </ion-item>
   </ion-list>
 
