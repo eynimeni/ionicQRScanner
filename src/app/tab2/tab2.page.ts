@@ -24,7 +24,10 @@ export class Tab2Page {
     });
   }
 
+  public testDisplay = false;
   public scan() {
+    this.testDisplay = !this.testDisplay;
+
     const startScan = async () => {
       BarcodeScanner.hideBackground(); // make background of WebView transparent
 

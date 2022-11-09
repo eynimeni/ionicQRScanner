@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {IonicStorageModule} from "@ionic/storage-angular";
 import {StorageService} from "./services/storage.service";
+import {BarcodeScanner} from "@capacitor-community/barcode-scanner";
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +19,9 @@ import {StorageService} from "./services/storage.service";
     AppRoutingModule],
   providers: [
     StorageService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {
